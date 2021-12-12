@@ -24,11 +24,13 @@ app.set("view engine", "pug");
 app.use(express.static(path.join(__dirname, "public")));
 
 var indexRouter = require('./routes/index');
+var adminRouter = require('./routes/admin');
 
 /**
  * Routes Definitions
  */
 app.use('/', indexRouter);
+app.use('/admin', adminRouter);
 
 // app.get("/user", (req, res) => {
 //     res.render("user", { title: "Profile", userProfile: { nickname: "Auth0" } });
