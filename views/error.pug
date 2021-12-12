@@ -1,0 +1,12 @@
+extends layout
+
+block layout-content
+  div.View.UserView
+    h1.Banner #{message}!
+    div.Message
+      div.Title
+        h1 #{error.status}
+      pre.Details #{error.stack}
+    div.NavButtons
+      a(href="/")
+        div.NavButton Home
