@@ -24,6 +24,10 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "pug": "^3.0.2"
+    "http-errors": "^1.8.1",
+    "morgan": "^1.10.0",
+    "morgan-json": "^1.1.0",
+    "pug": "^3.0.2",
+    "winston": "^3.3.3"
   }
 }
