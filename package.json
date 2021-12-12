@@ -1,0 +1,29 @@
+{
+  "name": "personal-calendar-sync",
+  "version": "1.0.0",
+  "description": "Using the Nylas APIs to sync personal calendar with work calendar",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./index.js",
+    "ui": "browser-sync start --config bs-config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djjazzyjew/personal-calendar-sync.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/djjazzyjew/personal-calendar-sync/issues"
+  },
+  "homepage": "https://github.com/djjazzyjew/personal-calendar-sync#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^3.0.2"
+  }
+}
