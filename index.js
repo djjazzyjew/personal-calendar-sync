@@ -19,16 +19,16 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 app.use(express.static(path.join(__dirname, "public")));
 
+var indexRouter = require('./routes/index');
+
 /**
  * Routes Definitions
  */
-app.get("/", (req, res) => {
-    res.render("index", { title: "Home" });
-});
+app.use('/', indexRouter);
 
-app.get("/user", (req, res) => {
-    res.render("user", { title: "Profile", userProfile: { nickname: "Auth0" } });
-});
+// app.get("/user", (req, res) => {
+//     res.render("user", { title: "Profile", userProfile: { nickname: "Auth0" } });
+// });
 
 /**
  * Server Activation
