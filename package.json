@@ -23,10 +23,12 @@
     "nodemon": "^2.0.15"
   },
   "dependencies": {
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "http-errors": "^1.8.1",
     "morgan": "^1.10.0",
     "morgan-json": "^1.1.0",
+    "nylas": "^5.10.2",
     "pug": "^3.0.2",
     "winston": "^3.3.3"
   }

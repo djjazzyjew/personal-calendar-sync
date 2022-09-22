@@ -9,3 +9,10 @@ Using the Nylas APIs to sync personal calendar with work calendar
 
 ## Logging
 Logs will be sent to /logs/app.log locally.  See logger.js for options.
+
+## Environment variables:
+Create an .env file in the root of your app with the following information:
+* ACCESS_TOKEN=\<your access token\>
+* CLIENT_ID=\<your client id\>
+* CLIENT_SECRET=\<your client secret\>
+* SESSION_SECRET=\<your session secret\>

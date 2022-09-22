@@ -7,7 +7,6 @@ const express = require("express");
 const path = require("path");
 const httpLogger = require('./httpLogger');
 const logger = require('./logger');
-var createError = require('http-errors');
 
 /**
  * App Variables
@@ -22,13 +21,19 @@ app.use(httpLogger);
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 app.use(express.static(path.join(__dirname, "public")));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 var indexRouter = require('./routes/index');
+var adminRouter = require('./routes/admin');
+var webhooksRouter = require('./routes/hooks');
 
 /**
  * Routes Definitions
  */
 app.use('/', indexRouter);
+app.use('/admin', adminRouter);
+app.use('/hooks', webhooksRouter);
 
 // app.get("/user", (req, res) => {
 //     res.render("user", { title: "Profile", userProfile: { nickname: "Auth0" } });
