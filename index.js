@@ -27,6 +27,7 @@ app.use(express.json());
 var indexRouter = require('./routes/index');
 var adminRouter = require('./routes/admin');
 var webhooksRouter = require('./routes/hooks');
+var calendarEventsRouter = require('./routes/calendarEventHandler');
 
 /**
  * Routes Definitions
@@ -34,6 +35,7 @@ var webhooksRouter = require('./routes/hooks');
 app.use('/', indexRouter);
 app.use('/admin', adminRouter);
 app.use('/hooks', webhooksRouter);
+app.use('/events', calendarEventsRouter);
 
 // app.get("/user", (req, res) => {
 //     res.render("user", { title: "Profile", userProfile: { nickname: "Auth0" } });
