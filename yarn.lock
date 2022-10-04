@@ -1244,10 +1244,10 @@
   "resolved" "https://registry.npmjs.org/normalize-path/-/normalize-path-3.0.0.tgz"
   "version" "3.0.0"
 
-"nylas@^5.10.2":
-  "integrity" "sha512-pBUtlJi8Q2s6eNdROeJxgUUmR1QgncWzFSvYiQ0zlCumZgn2IF30M33jOSy1oSflZUTcOiwgL62fnJ5scdv6/g=="
-  "resolved" "https://registry.npmjs.org/nylas/-/nylas-5.10.2.tgz"
-  "version" "5.10.2"
+"nylas@^6.0.0":
+  "integrity" "sha512-qozkCVy5hhI9ibBJ8QpNp8cWppuqf/BobNbvT1qmBi3Aa46QWtm8+sfxPSJg5E9sILJLZN7xOVkYTVsWHqjrRg=="
+  "resolved" "https://registry.npmjs.org/nylas/-/nylas-6.5.1.tgz"
+  "version" "6.5.1"
   dependencies:
     "abort-controller" "^3.0.0"
     "backoff" "^2.5.0"

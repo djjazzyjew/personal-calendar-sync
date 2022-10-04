@@ -1,4 +1,5 @@
 var express = require('express');
+const { default: Event } = require('nylas/lib/models/event');
 var router = express.Router();
 const { access_token, client_id, client_secret, src_access_token, dest_access_token, src_calendar_id, dest_calendar_id } = require('../config');
 const logger = require('../logger');
@@ -18,16 +19,14 @@ router.get('/test-calendar-conectivity', function(req, res, next) {
   const nylas_src = Nylas.with(src_access_token);
   const nylas_dest = Nylas.with(dest_access_token);
 
-  nylas_src.calendars.find(src_calendar_id).then(calendars => logger.debug(calendars));
-
-//   // Return all accounts connected to your Nylas App.
-//   if(Nylas.accounts) {
-//     Nylas.accounts.list().then(accounts => {
-//       for (let account of accounts) {
-//         logger.debug(`Email: ${account.emailAddress} | Billing State: ${account.billingState} | Sync State: ${account.syncState} | ID: ${account.id}`);
-//       }
-//     });
-//   } else { logger.debug('No accounts or this user')};
+  // Load hardcoded calendars based on IDs from .env
+  nylas_src.calendars.find(src_calendar_id).then(calendars => {
+    logger.debug(`Source Calendar = "${calendars.name}"`);
+  });
+  
+  nylas_dest.calendars.find(dest_calendar_id).then(calendars => {
+    logger.debug(`Destination Calendar = "${calendars.name}"`);
+  });
 
   res.render("admin", { title: "Testing Nylas connection" });
 });
