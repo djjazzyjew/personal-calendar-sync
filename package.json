@@ -28,7 +28,7 @@
     "http-errors": "^1.8.1",
     "morgan": "^1.10.0",
     "morgan-json": "^1.1.0",
-    "nylas": "^5.10.2",
+    "nylas": "^6.0.0",
     "pug": "^3.0.2",
     "winston": "^3.3.3"
   }
